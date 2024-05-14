@@ -1,4 +1,5 @@
 import React from 'react';
+import Digestclient from 'digest-fetch';
 
 import {useApi,configApiRef} from '@backstage/core-plugin-api'
 
@@ -22,3 +23,32 @@ export const MemoryComponent = () => {
       </Grid>
     </Grid>
 }
+
+/*
+const username = 'user';
+const passwd = 'pass';
+
+const BASE_URL = 'http://localhost:9990/management';;
+
+const Client = new DigestClient(username,passwd);
+
+// Heap-Used,Heap-Committed
+Client.fetch(`${BASE_URL}/core-service/platform-mbean/type/memory?operation=attribute&name=heap-memory-usage&json.pretty=1`, {})
+  .then(resp=>resp.json())
+  .then(data=>console.log(data))
+  .catch(e=>console.error(e))
+
+
+//Non-Heap-Used
+ Client.fetch(`${BASE_URL}/core-service/platform-mbean/type/memory?operation=attribute&name=non-heap-memory-usage&json.pretty=1`, {})
+  .then(resp=>resp.json())
+  .then(data=>console.log(data))
+  .catch(e=>console.error(e))
+
+//daemon threads
+  Client.fetch(`${BASE_URL}/core-service/platform-mbean/type/threading?operation=resource&json.pretty=1`, {})
+  .then(resp=>resp.json())
+  .then(data=>console.log(data))
+  .catch(e=>console.error(e))
+
+*/

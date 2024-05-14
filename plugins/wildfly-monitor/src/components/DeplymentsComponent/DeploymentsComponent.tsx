@@ -68,3 +68,14 @@ interface TableData {
     },
   ];
   
+  /*
+  Client.fetch(`${BASE_URL}/deployment/clac.war?operation=resource&include-runtime=true&json.pretty=1`, {})
+  .then(resp=>resp.json())
+  .then(data=>console.log(data))
+  .catch(e=>console.error(e))
+
+  Client.fetch(`${BASE_URL}/deployment`, {})
+  .then(resp=>resp.json())
+  .then(data=>console.log(data))
+  .catch(e=>console.error(e))
+ */

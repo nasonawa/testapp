@@ -61,3 +61,12 @@ export const ServerlogsComponent = () => (
     <LogViewer text={exampleLog} />
   </div>
 )
+
+
+  /*
+  Client.fetch(`${BASE_URL}/subsystem/logging/log-file/server.log?operation=attribute&name=stream&useStreamAsResponse`, {})
+  .then(resp=>resp.text())
+  .then(data=>console.log(data))
+  .catch(e=>console.error(e))
+
+  */
