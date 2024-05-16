@@ -6,7 +6,7 @@ organization:
   name: My Company
 
 wildfly:
-  url: http://localhost:8080
+  url: http://localhost:9990/management
   username: user
   password: pass
   
