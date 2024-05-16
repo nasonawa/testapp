@@ -14,18 +14,19 @@ export const ServerlogsComponent = () => {
   
   const BASE_URL = 'http://localhost:9990/management';
   const client = new DigestClient('user', 'pass') 
+
   
-  const fetchdata =  async () => {
-    try {
-      const response = await client.fetch(`${BASE_URL}/subsystem/logging/log-file/server.log?operation=attribute&name=stream&useStreamAsResponse`, {})
-      const data = await response.text();
-      setData(data);
-    }catch(e) {
-      console.log(e);
-    }
-  };
 
   useEffect(()=> {
+    const fetchdata =  async () => {
+      try {
+        const response = await client.fetch(`${BASE_URL}/subsystem/logging/log-file/server.log?operation=attribute&name=stream&useStreamAsResponse`, {})
+        const data = await response.text();
+        setData(data);
+      }catch(e) {
+        console.log(e);
+      }
+    };
     fetchdata();
 
   },[username,password,BASE_URL]);
