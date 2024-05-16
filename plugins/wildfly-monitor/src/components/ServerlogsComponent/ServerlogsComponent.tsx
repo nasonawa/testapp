@@ -12,7 +12,8 @@ export const ServerlogsComponent = () => {
   const username = config.get('wildfly.username');
   const password = config.get('wildfly.password');
   
-  const BASE_URL = 'http://localhost:9990/management';
+  const BASE_URL = config.get('wildfly.url');
+  
   const client = new DigestClient('user', 'pass') 
 
   
