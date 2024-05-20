@@ -14,9 +14,7 @@ export const ServerlogsComponent = () => {
   
   const BASE_URL = config.get('wildfly.url');
   
-  const client = new DigestClient('user', 'pass') 
-
-  
+  const client = new DigestClient(username, password);
 
   useEffect(()=> {
     const fetchdata =  async () => {
@@ -30,7 +28,7 @@ export const ServerlogsComponent = () => {
     };
     fetchdata();
 
-  },[username,password,BASE_URL]);
+  },[]);
 
   return (
   <div style={{ height: 240 }}>
