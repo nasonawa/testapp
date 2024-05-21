@@ -1,7 +1,6 @@
 import React from 'react';
-import { Typography, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import {
-  InfoCard,
   Header,
   Page,
   Content,
@@ -9,7 +8,6 @@ import {
   HeaderLabel,
   SupportButton,
 } from '@backstage/core-components';
-import { ExampleFetchComponent } from '../ExampleFetchComponent';
 import { DeploymentComponents } from '../DeplymentsComponent/DeploymentsComponent';
 import { MemoryComponent } from '../MemoryComponent/MemoryComponent';
 import { ServerlogsComponent } from '../ServerlogsComponent/ServerlogsComponent';

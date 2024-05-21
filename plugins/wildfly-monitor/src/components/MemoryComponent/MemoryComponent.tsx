@@ -70,7 +70,6 @@ export const MemoryComponent = () => {
         setHeap(heapdata);
         setNonHeap(nonheapdata);
         setthread(threaddata);
-        console.log(threaddata);
         }catch(e) {
           console.log(e);
         }
